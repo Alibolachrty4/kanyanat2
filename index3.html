@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="preload" as="image" href="https://gifdb.com/images/high/cute-love-bear-roses-ou7zho5oosxnpo6k.gif" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Kodchasan:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" />
+  <style>
+    body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+      font-family: 'Kodchasan', sans-serif; /* เพิ่มบรรทัดนี้เพื่อใช้ Kodchasan font */
+    }
+
+    .content-container {
+      text-align: center;
+    }
+
+    .content-container img {
+      height: 200px;
+      transition: all 0.3s ease-in-out;
+    }
+
+    .content-container h1 {
+      font-size: 2em;
+      margin: 1em 0;
+    }
+
+    .button-container {
+      display: flex;
+      gap: 1em;
+      justify-content: center;
+    }
+
+    button {
+      font-size: 20px;
+      transition: all 0.3s ease-in-out;
+      border: none;
+      cursor: pointer;
+    }
+
+    #yesButton {
+      background-color: #2ecc71;
+      color: white;
+    }
+
+    #noButton {
+      background-color: #2ecc71;
+      color: white;
+    }
+  </style>
+</head>
+
+<body class="__className_e66fe9">
+  <div class="content-container">
+    <img id="bearImage" src="https://gifdb.com/images/high/cute-love-bear-roses-ou7zho5oosxnpo6k.gif" alt="Love Bear" />
+    <h1 id="message">Happy Valentine's Day. นะอ้วนนน</h1>
+    
+    <h2 id="message">เค้าขอโทษน้าา ที่ทำตัวแย่ๆแบบนั้น</h2>
+    <h2 id="message">ดีกันนะ</h2>
+    <div class="button-container">
+      <button id="yesButton" class="font-bold py-2 px-4 rounded">Yes</button>
+      <button id="noButton" class="font-bold py-2 px-4 rounded">No</button>
+    </div>
+  </div>
+
+  <script>
+    const bearImage = document.getElementById('bearImage');
+    const message = document.getElementById('message');
+    const yesButton = document.getElementById('yesButton');
+    const noButton = document.getElementById('noButton');
+
+    yesButton.addEventListener('click', () => {
+      bearImage.src = 'https://gifdb.com/images/high/kissing-love-bears-ou7zho5oosxnpo6k.gif';
+      message.innerHTML = 'Yayyyyyyyy!!!!<br>ขอบคุณน้าาา รักอ้วนที่สุดเลยยยย ❤️';
+      bearImage.style.height = '300px';
+      bearImage.style.width = '300px';
+      yesButton.style.display = 'none';
+      noButton.style.display = 'none';
+    });
+
+    let yesButtonClickCount = 0;
+
+    yesButton.addEventListener('click', () => {
+      yesButtonClickCount++;
+      yesButton.style.fontSize = `${20 + yesButtonClickCount * 4}px`;
+    });
+
+    noButton.addEventListener('click', () => {
+      yesButtonClickCount++;
+      yesButton.style.fontSize = `${20 + yesButtonClickCount * 4}px`;
+    });
+  </script>
+</body>
+
+</html>
